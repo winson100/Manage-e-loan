@@ -1,0 +1,142 @@
+/* 申请结果页面样式 */
+
+/* 可滚动内容区域 */
+.scrollable-main-content {
+    /* 移动端布局：使用flex布局自适应高度，页面有按钮区域 */
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* 为固定底部按钮预留滚动空间 */
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+
+/* 结果图标区域 */
+.result-illustration {
+    margin-bottom: 40px;
+}
+
+.illustration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-icon {
+    width: 240px;
+    height: 160px;
+}
+
+/* 状态文字区域 */
+.status-section {
+    margin-bottom: 40px;
+}
+
+.status-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--neutral-color-nc20);
+    margin: 0 0 16px 0;
+    line-height: 1.4;
+}
+
+.status-description {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* 温馨提示区域 */
+.tips-section {
+    width: calc(100% - 32px); /* 减去左右各16px的间距 */
+    text-align: left;
+    background-color: #FFFBF0;
+    border-radius: 8px;
+    padding: 16px;
+    border: 1px solid #FED7AA;
+    margin: 0 16px; /* 左右各16px间距 */
+}
+
+.tips-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #D69E2E;
+    margin: 0 0 12px 0;
+}
+
+.tips-content {
+    margin: 0;
+}
+
+.tip-item {
+    font-size: 12px;
+    color: #744210;
+    line-height: 1.5;
+    margin: 0 0 8px 0;
+}
+
+.tip-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 底部按钮容器 - 固定定位 */
+.bottom-button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    padding: 16px;
+    border-top: 1px solid var(--neutral-color-nc30);
+    z-index: var(--z-index-navigation);
+    /* 支持iOS安全区域 */
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.bottom-button-container .btn-large {
+    width: 100%;
+    margin: 0;
+}
+
+
+
+
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .scrollable-main-content {
+        padding: 16px;
+        padding-bottom: calc(60px + env(safe-area-inset-bottom));
+    }
+    
+    .result-icon {
+        width: 200px;
+        height: 133px;
+    }
+    
+    .status-title {
+        font-size: 18px;
+    }
+    
+    .tips-section {
+        padding: 14px;
+        margin: 0 16px;
+        width: calc(100% - 32px);
+    }
+    
+    .result-illustration {
+        margin-bottom: 32px;
+    }
+    
+    .status-section {
+        margin-bottom: 32px;
+    }
+}

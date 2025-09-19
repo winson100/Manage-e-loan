@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>上传身份证 - 东莞银行</title>
+    <link rel="stylesheet" href="../src/styles/base/variables.css">
+    <link rel="stylesheet" href="../src/styles/base/section.css">
+    <link rel="stylesheet" href="../src/styles/base/element.css">
+    <link rel="stylesheet" href="../src/styles/base/mobile-layout.css">
+    
+    <link rel="stylesheet" href="../src/styles/components/bar/nav-bar.css">
+    <link rel="stylesheet" href="../src/styles/components/business/card-id-upload.css">
+    <link rel="stylesheet" href="../css/id-card-upload.css">
+</head>
+<body>
+    <!-- 导航栏 - 固定定位 -->
+    <div class="nav-bar nav-bar-white">
+        <div class="nav-left" onclick="window.location.href='product-detail.html'">
+            <img src="../src/assets/icons/arrow-left.svg" alt="返回" class="nav-icon">
+        </div>
+        <div class="nav-title">上传身份证</div>
+        <div class="nav-right">
+            <img src="../assets/icons/more.svg" alt="更多" class="nav-icon">
+        </div>
+    </div>
+
+    <div class="content-area">
+        <!-- 可滚动内容容器 -->
+        <div class="scrollable-main-content with-button-area">
+                    
+                    <!-- 上传身份证部分 -->
+                    <section class="section">
+                        <div class="id-card-section">
+                            <div class="id-card-item">
+                                <img src="../src/assets/images/frontofIDcard.png" alt="身份证人像面" class="id-card-image">
+                            </div>
+                            <div class="id-card-item">
+                                <img src="../src/assets/images/reverseofIDcard.png" alt="身份证国徽面" class="id-card-image">
+                            </div>
+                        </div>
+                    </section>
+
+        </div>
+
+        <!-- 全宽按钮 -->
+        <section class="section">
+            <div class="btn-group">
+                <button class="btn-large btn-primary" onclick="window.location.href='application-info.html'">
+                    <span class="btn-text">下一步</span>
+                </button>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
