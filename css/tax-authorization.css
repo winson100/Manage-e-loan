@@ -1,0 +1,176 @@
+/* 认证授权页面样式 */
+
+/* 可滚动内容容器样式 */
+.scrollable-main-content {
+    /* 移动端布局：使用flex布局自适应高度，页面有按钮区域 */
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: #f5f5f5;
+    /* 为固定底部按钮预留滚动空间 */
+    padding-bottom: calc(60px + env(safe-area-inset-bottom));
+}
+
+/* 授权说明区域 */
+.authorization-header {
+    background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+    padding: 24px 20px;
+    color: white;
+}
+
+.auth-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.auth-description {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* 权限列表 */
+.permission-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.permission-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.check-icon {
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.permission-text {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* 表单区域 */
+.form-section {
+    background-color: white;
+    padding: 20px 16px;
+}
+
+/* 表单项 */
+.form-item {
+    margin-bottom: 20px;
+}
+
+.form-item:last-child {
+    margin-bottom: 0;
+}
+
+.form-label {
+    font-size: 14px;
+    color: var(--neutral-color-nc40);
+    margin-bottom: 8px;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input input {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.form-input input:focus {
+    outline: none;
+}
+
+/* 验证码区域 */
+.captcha-section {
+    margin-top: 24px;
+}
+
+.captcha-input-group {
+    display: flex;
+    gap: 12px;
+    align-items: flex-end;
+}
+
+.captcha-input-group .form-input {
+    flex: 1;
+}
+
+.captcha-image {
+    flex-shrink: 0;
+    width: 80px;
+    height: 40px;
+    border: 1px solid var(--neutral-color-nc30);
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.captcha-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.captcha-placeholder {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: line-through;
+    letter-spacing: 2px;
+}
+
+/* 底部按钮容器 - 固定定位 */
+.bottom-button-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 16px;
+    border-top: 1px solid var(--neutral-color-nc30);
+    z-index: var(--z-index-navigation);
+    /* 支持iOS安全区域 */
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+}
+
+.bottom-button-container .btn-large {
+    width: 100%;
+    margin: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .authorization-header {
+        padding: 20px 16px;
+    }
+    
+    .form-section {
+        padding: 16px 12px;
+    }
+    
+    .scrollable-main-content {
+        padding-bottom: calc(60px + env(safe-area-inset-bottom));
+    }
+}

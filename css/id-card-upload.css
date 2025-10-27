@@ -1,0 +1,28 @@
+/* 上传身份证页面样式 */
+
+/* 可滚动内容容器样式 */
+.scrollable-main-content {
+    /* 移动端布局：使用flex布局自适应高度，页面有按钮区域 */
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    background-color: #f5f5f5;
+}
+
+/* 使用组件库样式，保持居中布局 */
+.scrollable-main-content .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .scrollable-main-content {
+        /* 移动端布局已通过flex自适应，无需额外高度设置 */
+    }
+}
